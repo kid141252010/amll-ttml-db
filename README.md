@@ -107,11 +107,17 @@
 >
 > 由于历史原因，2024 年之前的投稿可能会出现一些不完全符合当前标准的内容，敬请谅解！如果你对这些内容有疑虑但有额外精力，可以考虑投稿进行修正，我们将优先处理！
 
+### 在 AMLL TTML 歌词站 中检索是否有已提交歌词 (推荐)
+
+请访问 [AMLL TTML 歌词站](https://amlldb.bikonoo.com)，在最上方点击 <kbd>歌词搜索</kbd> 按钮进入搜索页面，输入您要提交歌词的歌曲名称并点击 <kbd>搜索</kbd> 按钮，如无任何结果，则该歌曲暂无 TTML 歌词，欢迎您的提交。
+
+> 感谢 HelloZGY [@cybaka520](https://github.com/cybaka520) 建立的歌词站！
+
 ### 在此仓库中检索是否有已提交歌词
 
 请参考 [歌词元数据说明](https://github.com/Steve-xmh/amll-ttml-tool/wiki/%E6%AD%8C%E8%AF%8D%E5%85%83%E6%95%B0%E6%8D%AE) 获取您要提交歌词的歌曲 ID，在本仓库内搜索该 ID，如无任何文件，则该歌曲暂无 TTML 歌词，欢迎您的提交。
 
-### 在 SearchInAMLLDB 中检索是否有已提交歌词
+### 在 SearchInAMLLDB 中检索是否有已提交歌词 (备选)
 
 请访问 [SearchInAMLLDB](https://steamfinder.github.io/search-in-amlldb)，在最上方点击 <kbd>更新数据库</kbd> 按钮拉取数据，输入您要提交歌词的歌曲名称并点击 <kbd>查询</kbd> 按钮，如无任何结果，则该歌曲暂无 TTML 歌词，欢迎您的提交。
 
@@ -153,24 +159,27 @@
   > 对于可能有 NSFW 内容的歌词内容翻译，不反对表达原意，但请尽量把握尺度、点到为止，否则可能视情况推迟审核，甚至驳回歌词。
   > 
   > *NSFW：Not Safe For Work 的缩写，意思是某个网络内容不适合在工作场合浏览。它通常用于标记包含裸露、暴力或色情等不适合在工作环境中查看的内容。*
+> 我们原则上依旧接受逐句歌词。但除非特殊情况，我们更希望您能上传逐词歌词以带给听众最佳体验。
 
 #### 优先审核要求
 
 - 是逐词歌词，确保打轴时序差在 ±100 毫秒以内；
 - 充分利用 TTML 歌词特性，例如有背景人声歌词和对唱歌词；
-- 提供翻译和音译（如果有）。
+- 提供翻译和音译（如果有）；
   > 对于不使用 AMLL TTML Tool 的歌词制作者或歌词编辑器开发者，你可以在需要添加音译或翻译的行的 `p` 元素中加入 `<span ttm:role="x-translation" xml:lang="...">...</span>` 作为翻译文本或者 `<span ttm:role="x-roman">...</span>` 作为音译文本。
+- 歌词所对应的歌曲在网易云音乐有版权。
 
 ### 使用 AMLL TTML Tool 制作逐词歌词
 
 我们推荐使用 [AMLL TTML Tool](https://amll-ttml-tool.stevexmh.net) 制作逐词歌词，此 README 将简要介绍 AMLL TTML Tool 的使用步骤。
+> 您也可以使用 [@Linho1219](https://github.com/Linho1219) 开发的 [AMLL Editor](https://editor.amll.dev) 制作逐词歌词，此编辑器在打轴界面引入了 <kbd>随播放自动滚动</kbd> ，以及其他实用功能。
 
 您需要准备：
 
-1. 可被 AMLL TTML Tool 读取的歌曲音频文件；
-   > 受加密保护的格式不受支持。
+1. 可被 AMLL 系列编辑器 读取的歌曲音频文件；
+   > 受加密保护的格式不受支持；
 2. 纯文本 或 其他格式的歌词文件。
-   > 支持导入 LRC / ESLyric / YRC / QRC / Lyricify Syllable 格式的歌词文件。
+   > 支持导入 TTML / LRC / ESLyric / YRC / QRC / Lyricify Syllable 格式的歌词文件。
 
 然后：
 
@@ -189,8 +198,19 @@
 
 ## 3. 提交歌词
 
-我们推荐通过 [创建「提交/补正歌词」Issue](https://github.com/Steve-xmh/amll-ttml-db/issues/new?template=submit-lyric.yml) 的方式提交歌词，您可以在该页面查看详细的提交流程。
+- 我们推荐通过 [创建「提交/补正歌词」Issue](https://github.com/Steve-xmh/amll-ttml-db/issues/new?template=submit-lyric.yml) 的方式提交歌词，您可以在该页面查看详细的提交流程。
 
+- 您也可以 [创建「提交/补正歌词」Pull Request](https://github.com/Steve-xmh/amll-ttml-db/pulls) 的方式提交歌词，此方法需要您确保您的 TTML 歌词文件 **格式正确**，并仿照本仓库内 Bot 所提交的 Pull Request 进行编写。
+   > 此方法可以避免Bot在歌词提交时造成的 重排元数据 / 依据时间轴重排歌词行顺序 等格式化行为，但请您务必确保所提交的 TTML 歌词文件 及 Pull Request 内容 **格式完全正确**。
+
+- 您还可以在 [AMLL TTML 歌词站 创作中心](https://amlldb.bikonoo.com/manage.html) 提交歌词。在歌词站上传歌词需要您注册并登录，点击 <kbd>投稿</kbd> 并上传 TTML 歌词文件，通常情况下网站会自动识别歌词元数据并填充投稿标题，直接提交即可。
+   > 目前歌词站的审核人员较少，若您想要快速审核，请优先考虑Github站内投稿。
+
+> 如果您的歌曲在网易云音乐无版权，您可以自行上传歌曲文件。
+ > - 在 Issue 中，您可以在 备注 处填写歌曲文件下载链接；
+ > - 在 Pull Request 中，您可以在 主内容 / Comment 处填写歌曲文件下载链接；
+ > - 在 AMLL TTML 歌词站 创作中心 中，您可以点击 <kbd>内容管理</kbd>，找到并点击进入您想要上传歌曲文件的歌词，再点击 <kbd>上传音频</kbd> 即可上传歌曲文件。
+ 
 ## 4. 等待审核
 
 为了提高歌词库的歌词统一性和综合质量，您的歌词将由 AMLL TTML 歌词审核团进行人工审核，以确保您的歌词符合 [歌词审核细则](./instructions/instruction.md) 的要求。
@@ -206,17 +226,27 @@
   - 除非歌词本身不为歌曲考虑使用对唱歌词，否则应该要根据当前演唱者主次关系设置正确的对唱歌词，在没有确切动机的情况下，不应将同一演唱者的同一演唱形式，设置出两种不同的歌词状态。
     > **演唱形式** 可以是主唱、说唱、和声等。
 
-如果您认为您的歌词不存在审核员修改意见中的问题，请尝试再次提交并附上原因，以便审核员理解你的意图，或是请求其他审核员审核。
+如果您认为您的歌词不存在审核员修改意见中的问题，请尝试再次提交并附上原因，以便审核员理解你的意图，或是请求其他审核员审核；
 
+如果您对审核结果认同并完成修改，您可以在原 Pull Request 下方的 <kbd>Comment</kbd> (即评论) 处，用以下格式提交修改后的 TTML 歌词文件。
+```
+/update 您的TTML歌词文件直链
+```
 ***
 
 # 使用歌词数据库
 
 ## AMLL Player [推荐]
 
-AMLL Player 是 Apple Music-like Lyrics 的本地客户端，可播放本地音乐和连接 WebSocket 服务端。[前往了解](https://github.com/Steve-xmh/applemusic-like-lyrics/actions/workflows/build-player.yaml)
+AMLL Player 是 Apple Music-like Lyrics 的本地客户端，可播放本地音乐和连接 WebSocket 服务端。[前往下载](https://github.com/Steve-xmh/applemusic-like-lyrics/actions/workflows/build-player.yaml)
 
 AMLL Player 已内置歌词库搜索功能，导入本地歌曲后编辑歌词覆盖信息，即可从 AMLL TTML DB 搜索/导入歌词。
+
+## AMLL Page 
+
+AMLL Page 是 Apple Music-like Lyrics 的在线网页版本，可播放本地音乐和连接 WebSocket 服务端，与 Player 别无二致。[前往了解](https://github.com/apoint123/amll-page)
+
+> 感谢 [@apoint123](https://github.com/apoint123) 开发的网页版 AMLL！
 
 ##  Apple Music-like Lyrics for BetterNCM [停止维护]
 
