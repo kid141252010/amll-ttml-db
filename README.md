@@ -113,7 +113,7 @@
 
 ### 在 AMLL TTML 歌词站 中检索是否有已提交歌词 (推荐)
 
-请访问 [AMLL TTML 歌词站](https://amlldb.bikonoo.com)，在最上方点击 <kbd>歌词搜索</kbd> 按钮进入搜索页面，输入您要提交歌词的歌曲名称并点击 <kbd>搜索</kbd> 按钮，如无任何结果，则该歌曲暂无 TTML 歌词，欢迎您的提交。
+请访问 [AMLL TTML 歌词站 搜索界面](https://amlldb.bikonoo.com/search.html)，输入您要提交歌词的歌曲名称并点击 <kbd>搜索</kbd> 按钮，如无任何结果，则该歌曲暂无 TTML 歌词，欢迎您的提交。
 
 > 感谢 HelloZGY [@cybaka520](https://github.com/cybaka520) 建立的歌词站！
 
