@@ -14,6 +14,11 @@
 /
 [AMLL Page 网页播放器](https://github.com/apoint123/amll-page)
 
+**—— 本仓库中的重要文档 ——**
+[审核细则]
+/
+[TTML文件规范]
+
 </div>
 
 ***
