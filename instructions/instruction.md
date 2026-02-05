@@ -733,7 +733,7 @@ Apple Music 可以通过 AME 插件切换分区查找相同 **歌曲ID** 但不�
 Apple Music 分区发行歌曲的查找在上述 HOYO-MiX 要求中已提及，不再赘述。
 
 Spotify 可以使用 Lyricify 4 的搜索工具进行换区搜索（可能需要更换对应语言的歌曲名）：
-  - ![使用 Lyricify4 查找歌曲信息](./img/image-20250728160546661.png)
+  ![使用 Lyricify4 查找歌曲信息](./img/image-20250728160546661.png)
 
 ## 6. 其他
 
