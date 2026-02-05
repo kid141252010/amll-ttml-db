@@ -251,7 +251,7 @@ AMLL Player 已内置歌词库搜索功能，导入本地歌曲后编辑歌词�
 
 ## AMLL Page 
 
-AMLL Page 是 Apple Music-like Lyrics 的在线网页版本，可播放本地音乐和连接 WebSocket 服务端，除插件功能外，与 Player 基本一致。[前往了解](https://github.com/apoint123/amll-page)
+AMLL Page 是 AMLL Player 的在线网页版本，可播放本地音乐和连接 WebSocket 服务端，除插件功能外，与 Player 基本一致。[前往了解](https://github.com/apoint123/amll-page)
 
 > 感谢 [@apoint123](https://github.com/apoint123) 开发的网页版 AMLL！
 
