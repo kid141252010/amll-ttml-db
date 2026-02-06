@@ -715,8 +715,7 @@
 - 由于部分发行方 如 HOYO-MIX / 鸣潮先约电台 / 塞壬唱片-MSR ，会在不同地区发行不同语言/版本的歌曲，特出此篇；
   > 具体细节可参考来自 [@ITManCHINA](https://github.com/ITManCHINA) 的 [小提示](https://github.com/Steve-xmh/amll-ttml-db/discussions/7008)，本篇仅简单讲解要点。
 
-- Apple Music 可以通过 AME 插件切换分区查找相同 **歌曲ID** 但不同 **元数据语言** 的歌曲：
-  - ![AME 插件查找歌曲信息](./img/image-20250821184933745.png)
+- Apple Music 可以通过 AME 插件切换分区查找相同 **歌曲ID** 但不同 **元数据语言** 的歌曲：![AME 插件查找歌曲信息](./img/image-20250821184933745.png)
   - 简中区：Chinese Mainland
   - 繁中区：Hong Kong SAR, Macao SAR, Taiwan Province, People's Republic of China
   - 韩语区：Korea, Republic of
