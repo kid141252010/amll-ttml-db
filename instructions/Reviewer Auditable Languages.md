@@ -68,16 +68,16 @@
     <tr>
       <td align="center"><b><img src="https://avatars.githubusercontent.com/u/108002475?v=4" width="30" height="30" alt="apoint123" style="vertical-align:sub; margin-right:5px;"><br><a href="https://github.com/apoint123">apoint123</a></b></td>
       <td align="center">✅</td>
-      <td align="center">❓粤语</td>
-      <td align="center">❓闽南语</td>
       <td align="center">✅</td>
-      <td align="center">❓日语</td>
-      <td align="center">❓韩语</td>
-      <td align="center">❓法语</td>
-      <td align="center">❓德语</td>
-      <td align="center">❓西班牙语</td>
-      <td align="center">❓葡萄牙语</td>
-      <td align="center">❓俄语</td>
+      <td align="center">❌</td>
+      <td align="center">✅</td>
+      <td align="center">✅</td>
+      <td align="center">❌</td>
+      <td align="center">❌</td>
+      <td align="center">❌</td>
+      <td align="center">❌</td>
+      <td align="center">❌</td>
+      <td align="center">❌</td>
     </tr>
     <tr>
       <td align="center"><b><img src="https://avatars.githubusercontent.com/u/111688524?v=4" width="30" height="30" alt="cybaka520" style="vertical-align:sub; margin-right:5px;"><br><a href="https://github.com/cybaka520">cybaka520</a></b></td>
