@@ -1,4 +1,8 @@
-use std::{collections::HashMap, path::Path, sync::Arc};
+use std::{
+    collections::{HashMap, HashSet},
+    path::Path,
+    sync::Arc,
+};
 
 use anyhow::{Context, Result};
 use lyrics_helper_core::{CanonicalMetadataKey, MetadataStore};
@@ -412,15 +416,44 @@ impl GitHubClient {
             return Ok(());
         }
 
-        let labels: Vec<String> = labels_str.split_whitespace().map(String::from).collect();
+        let target_labels: Vec<String> = labels_str.split_whitespace().map(String::from).collect();
 
-        if labels.is_empty() {
+        if target_labels.is_empty() {
+            return Ok(());
+        }
+
+        let labels_page = self
+            .client
+            .issues(&self.owner, &self.repo)
+            .list_labels_for_repo()
+            .per_page(100)
+            .send()
+            .await?;
+
+        let repo_labels = self.client.all_pages(labels_page).await?;
+
+        let valid_label_names: HashSet<String> = repo_labels.into_iter().map(|l| l.name).collect();
+
+        let mut invalid_labels = Vec::new();
+        for label in &target_labels {
+            if !valid_label_names.contains(label) {
+                invalid_labels.push(label.clone());
+            }
+        }
+
+        if !invalid_labels.is_empty() {
+            let invalid_list_str = invalid_labels.join(", ");
+            let error_msg = format!(
+                "@{requester}，未能添加部分标签\n以下标签在仓库中不存在: {invalid_list_str}"
+            );
+            self.post_comment(pr_number, &error_msg).await?;
+
             return Ok(());
         }
 
         self.client
             .issues(&self.owner, &self.repo)
-            .add_labels(pr_number, &labels)
+            .add_labels(pr_number, &target_labels)
             .await?;
 
         self.client
