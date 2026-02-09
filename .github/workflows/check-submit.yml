@@ -28,6 +28,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: 配置稀疏检出
+        run: |
+          git sparse-checkout init --cone
+          git sparse-checkout set raw-lyrics scripts metadata .github
+
       - name: 安装 Rust 环境
         uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
