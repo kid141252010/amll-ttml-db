@@ -1,6 +1,8 @@
-[English Version](https://github.com/amll-dev/amll-ttml-db/blob/main/README-EN.md)
-
 <div align=center>
+
+[简体中文版本](https://github.com/amll-dev/amll-ttml-db/blob/main/README.md)
+/
+[English Version](https://github.com/amll-dev/amll-ttml-db/blob/main/README-EN.md)
 
 # **AMLL TTML DataBase**
 
