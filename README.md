@@ -248,7 +248,7 @@
 > [!TIP]
 >
 > 若您的歌词 Pull Request 处于 **未审核**（无 `审核中` 标签）或 **审核未通过**（审核留言歌词驳回原因，且标记 `待更新` 标签）状态，您可在该 PR 内 Comment（即评论） `/update {TTML 歌词文件下载直链}` 以更新歌词文件，此行为视为重新提交审核；
-> > 若您需要增加备注或原内容已有备注，都需要评论 `/update {TTML 歌词文件下载直链} {备注}` ，否则Bot将覆盖您的原备注。
+> > 若您需要增加备注，请评论 `/update {TTML 歌词文件下载直链} {备注}` 。
 > 
 > 在 Pull Request 内 Comment（即评论） `/label {标签}` 以添加 [合适的标签](https://github.com/amll-dev/amll-ttml-db/labels)；
 > 
