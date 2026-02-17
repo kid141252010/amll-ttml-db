@@ -10,7 +10,7 @@
 > [!TIP]
 > 本排名由机器人根据已在库歌词统计元数据信息后自动生成，贡献最多排前，同贡献量排名不分先后。
 > 
-> 最后更新于 2026-02-16 23:32 (UTC+8)
+> 最后更新于 2026-02-17 16:54 (UTC+8)
 
 ![贡献者头像画廊](https://amll-ttml-db.stevexmh.net/contributors.png)
 
@@ -39,10 +39,10 @@
 | 21 | <img src="https://avatars.githubusercontent.com/u/65570536?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[haroyamada](https://github.com/haroyamada) | 24 |
 | 22 | <img src="https://avatars.githubusercontent.com/u/136059186?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[MiaowCham](https://github.com/MiaowCham) | 22 |
 | 23 | <img src="https://avatars.githubusercontent.com/u/85813508?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[dontknowhy](https://github.com/dontknowhy) | 21 |
-| 24 | <img src="https://avatars.githubusercontent.com/u/70494801?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[Super12138](https://github.com/Super12138) | 20 |
-| 25 | <img src="https://avatars.githubusercontent.com/u/79665752?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[EnchStudio](https://github.com/EnchStudio) | 20 |
-| 26 | <img src="https://avatars.githubusercontent.com/u/154799151?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[user10124-RS](https://github.com/user10124-RS) | 19 |
-| 27 | <img src="https://avatars.githubusercontent.com/u/42143735?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[MeTerminator](https://github.com/MeTerminator) | 19 |
+| 24 | <img src="https://avatars.githubusercontent.com/u/42143735?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[MeTerminator](https://github.com/MeTerminator) | 20 |
+| 25 | <img src="https://avatars.githubusercontent.com/u/70494801?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[Super12138](https://github.com/Super12138) | 20 |
+| 26 | <img src="https://avatars.githubusercontent.com/u/79665752?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[EnchStudio](https://github.com/EnchStudio) | 20 |
+| 27 | <img src="https://avatars.githubusercontent.com/u/154799151?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[user10124-RS](https://github.com/user10124-RS) | 19 |
 | 28 | <img src="https://avatars.githubusercontent.com/u/86895196?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[HGUFlyingDog](https://github.com/HGUFlyingDog) | 19 |
 | 29 | <img src="https://avatars.githubusercontent.com/u/205412075?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[zhushao233](https://github.com/zhushao233) | 18 |
 | 30 | <img src="https://avatars.githubusercontent.com/u/141757610?v=4" width="20" height="20" style="vertical-align:sub; margin-right:5px" />[smzase](https://github.com/smzase) | 17 |
