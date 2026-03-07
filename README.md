@@ -6,26 +6,38 @@
 
 **—— AMLL 生态作品 ——**
 
-[Apple Music-like Lyrics](https://github.com/Steve-xmh/applemusic-like-lyrics)
+[Apple Music-like Lyrics](https://github.com/amll-dev/applemusic-like-lyrics)
 /
-[AMLL TTML Tool 逐词歌词编辑器](https://github.com/Steve-xmh/amll-ttml-tool)
+[AMLL TTML Tool 逐词歌词编辑器](https://github.com/amll-dev/amll-ttml-tool)
+/
+[AMLL Editor 下一代逐词歌词编辑器](https://github.com/amll-dev/amll-editor) (开发中)
+/
+[AMLL Page 网页播放器](https://github.com/apoint123/amll-page)
+
+**—— 本仓库中的重要文档 ——**
+
+[审核细则](https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/instruction.md)
+/
+[TTML文件规范](https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification.md)
+/
+[审核团成员可审核语言](https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/Reviewer%20Auditable%20Languages.md)
 
 </div>
 
 ***
 
-> [!Warning]
-> 致使用歌词库的开发者：  
-> 本仓库将于近期迁移至 [amll-dev](https://github.com/amll-dev) 组织，届时仓库链接将更新为 https://github.com/amll-dev/amll-ttml-db ，请下游仓库注意更新。
+> [!TIP]
+>
+> ## 📣【公告】
+> 我们正在招募内容审核志愿者及长期维护开发者！  
+> 更多信息请到 [公告帖](https://github.com/amll-dev/amll-ttml-db/discussions/8127) 查看  
+> 感谢各位投稿者对本项目的支持！
 
 ***
 
-> [!TIP]
->
-> ### 📣【公告】
-> 歌词库现已良好支持逐字音译，欢迎投稿！  
-> 更多信息请到 [公告帖](https://github.com/Steve-xmh/amll-ttml-db/discussions/6870) 查看  
-> 感谢各位投稿者对本项目的支持！
+> [!Warning]
+> 致使用歌词库的开发者：  
+> 本仓库已迁移至 [amll-dev](https://github.com/amll-dev) 组织，仓库链接已更新为 https://github.com/amll-dev/amll-ttml-db ，请下游仓库注意更新。
 
 ***
 
@@ -37,7 +49,7 @@
 >
 > Since AMLL series software currently does not support multilingual translations, users should get single-language-translated lyric by third-party tools (e.g. [ranhengzhang/ttml-trans-filter](https://github.com/ranhengzhang/ttml-trans-filter)) before using.
 >
-> Looking for more details? 👉[TTML Specification (Section 5.3)](https://github.com/Steve-xmh/amll-ttml-db/blob/main/instructions/ttml-specification-en.md#53-multi-language-and-background-support).
+> Looking for more details? 👉[TTML Specification (Section 5.3)](https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/ttml-specification-en.md#53-multi-language-and-background-support).
 >
 > ---
 >
@@ -62,7 +74,7 @@
 > >
 > > **Example File:**
 > >
-> > [HOYOMiX/YMIR - 耀斑](https://github.com/Steve-xmh/amll-ttml-db/blob/main/raw-lyrics/1752080938784-68000793-8355bb14.ttml)
+> > [HOYOMiX/YMIR - 耀斑](https://github.com/amll-dev/amll-ttml-db/blob/main/raw-lyrics/1752080938784-68000793-8355bb14.ttml)
 >
 > ---
 >
@@ -85,7 +97,7 @@
 > >
 > > **Example File:**
 > >
-> > [Darren Korb - Time Belongs to Us](https://github.com/Steve-xmh/amll-ttml-db/blob/main/raw-lyrics/1762708573944-68000793-qnjnaX11.ttml)
+> > [Darren Korb - Time Belongs to Us](https://github.com/amll-dev/amll-ttml-db/blob/main/raw-lyrics/1762708573944-68000793-qnjnaX11.ttml)
 > >
 > > ---
 > >
@@ -107,11 +119,17 @@
 >
 > 由于历史原因，2024 年之前的投稿可能会出现一些不完全符合当前标准的内容，敬请谅解！如果你对这些内容有疑虑但有额外精力，可以考虑投稿进行修正，我们将优先处理！
 
+### 在 AMLL TTML 歌词站中检索是否有已提交歌词 (推荐)
+
+请访问 AMLL TTML 歌词站的[搜索界面](https://amlldb.bikonoo.com/search.html)，输入您要提交歌词的歌曲名称并点击 <kbd>搜索</kbd> 按钮，如无任何结果，则该歌曲暂无 TTML 歌词，欢迎您的提交。
+
+> 感谢 [@cybaka520](https://github.com/cybaka520) 建立的歌词站！
+
 ### 在此仓库中检索是否有已提交歌词
 
-请参考 [歌词元数据说明](https://github.com/Steve-xmh/amll-ttml-tool/wiki/%E6%AD%8C%E8%AF%8D%E5%85%83%E6%95%B0%E6%8D%AE) 获取您要提交歌词的歌曲 ID，在本仓库内搜索该 ID，如无任何文件，则该歌曲暂无 TTML 歌词，欢迎您的提交。
+请参考 [歌词元数据说明](https://github.com/amll-dev/amll-ttml-tool/wiki/%E6%AD%8C%E8%AF%8D%E5%85%83%E6%95%B0%E6%8D%AE) 获取您要提交歌词的歌曲 ID，在本仓库内搜索该 ID，如无任何文件，则该歌曲暂无 TTML 歌词，欢迎您的提交。
 
-### 在 SearchInAMLLDB 中检索是否有已提交歌词
+### 在 SearchInAMLLDB 中检索是否有已提交歌词 (备选)
 
 请访问 [SearchInAMLLDB](https://steamfinder.github.io/search-in-amlldb)，在最上方点击 <kbd>更新数据库</kbd> 按钮拉取数据，输入您要提交歌词的歌曲名称并点击 <kbd>查询</kbd> 按钮，如无任何结果，则该歌曲暂无 TTML 歌词，欢迎您的提交。
 
@@ -131,9 +149,9 @@
 >
 > 如果你发布了占位议题并提交了投稿，我们建议在备注中引用你的议题，以减少可能的疑议。
 
-请访问 [此仓库/issue](https://github.com/Steve-xmh/amll-ttml-db/issues) ，搜索您要提交歌词的歌曲名称，如无 **Open 状态的、有「歌词制作占位」标签的** Issue，则该歌曲的歌词提交工作尚未被接手，欢迎您的提交。
+请访问本仓库的 [Issues](https://github.com/amll-dev/amll-ttml-db/issues)  栏目，搜索您要提交歌词的歌曲名称，如无 **Open 状态的、有「歌词制作占位」标签**的 Issue，则该歌曲的歌词提交工作尚未被接手，欢迎您的提交。
 
-您也可以访问 [AMLL TTML 歌词议题墙](https://amlldb.bikonoo.com/) 检索。
+您也可以访问 [AMLL TTML 歌词站](https://amlldb.bikonoo.com/) 检索。
 
 ## 2. 制作歌词
 
@@ -153,30 +171,35 @@
   > 对于可能有 NSFW 内容的歌词内容翻译，不反对表达原意，但请尽量把握尺度、点到为止，否则可能视情况推迟审核，甚至驳回歌词。
   > 
   > *NSFW：Not Safe For Work 的缩写，意思是某个网络内容不适合在工作场合浏览。它通常用于标记包含裸露、暴力或色情等不适合在工作环境中查看的内容。*
-
-#### 优先审核要求
+  
+#### 一般性审核要求
 
 - 是逐词歌词，确保打轴时序差在 ±100 毫秒以内；
+  > 我们原则上依旧接受逐句歌词。但除非特殊情况，我们更希望您能上传逐词歌词以带给听众最佳体验。
 - 充分利用 TTML 歌词特性，例如有背景人声歌词和对唱歌词；
 - 提供翻译和音译（如果有）。
   > 对于不使用 AMLL TTML Tool 的歌词制作者或歌词编辑器开发者，你可以在需要添加音译或翻译的行的 `p` 元素中加入 `<span ttm:role="x-translation" xml:lang="...">...</span>` 作为翻译文本或者 `<span ttm:role="x-roman">...</span>` 作为音译文本。
 
+> [!NOTE]
+> 您可以使用来自 Apple Music 的 TTML 歌词文件，但一般情况下这类歌词很难做到完全精准，请您尽量避免不作修正直接提交，以防被审核员因 **单词偏移值过大** 而驳回。
+
 ### 使用 AMLL TTML Tool 制作逐词歌词
 
 我们推荐使用 [AMLL TTML Tool](https://amll-ttml-tool.stevexmh.net) 制作逐词歌词，此 README 将简要介绍 AMLL TTML Tool 的使用步骤。
+> 您也可以使用 [@Linho1219](https://github.com/Linho1219) 开发的 [AMLL Editor](https://editor.amll.dev) 制作逐词歌词，此编辑器在打轴界面引入了 <kbd>随播放自动滚动</kbd> ，以及更多实用功能。
 
 您需要准备：
 
 1. 可被 AMLL TTML Tool 读取的歌曲音频文件；
    > 受加密保护的格式不受支持。
-2. 纯文本 或 其他格式的歌词文件。
-   > 支持导入 LRC / ESLyric / YRC / QRC / Lyricify Syllable 格式的歌词文件。
+2. 可被 AMLL TTML Tool 识别的歌词文件或歌词纯文本。
+   > AMLL TTML Tool 所支持的歌词格式： TTML / LRC / ESLyric / YRC / QRC / Lyricify Syllable
 
 然后：
 
 1. 在左上角依次点击 <kbd>文件</kbd> <kbd>导入歌词</kbd> 并选择您导入歌词的格式，根据页面提示导入歌词；
 2. 在左下角导入您的歌曲音频文件，调整播放倍速和音量；
-3. 在左上角依次点击 <kbd>编辑</kbd> <kbd>编辑歌词元数据</kbd> ，参考 [歌词元数据说明](https://github.com/Steve-xmh/amll-ttml-db/blob/main/instructions/instruction.md#1-%E5%85%83%E6%95%B0%E6%8D%AE) 编辑歌词元数据；
+3. 在左上角依次点击 <kbd>编辑</kbd> <kbd>编辑歌词元数据</kbd> ，参考 [歌词元数据说明](https://github.com/amll-dev/amll-ttml-db/blob/main/instructions/instruction.md#1-%E5%85%83%E6%95%B0%E6%8D%AE) 编辑歌词元数据；
 4. 在 **编辑** 界面编辑您的歌词，如对歌词行分词 、更改歌词行属性、填写翻译和音译歌词等；
 5. 在 **打轴** 界面制作逐词歌词，播放音频，善用以下按键开始打轴：
    | 按键         | 说明                                                         |
@@ -189,8 +212,19 @@
 
 ## 3. 提交歌词
 
-我们推荐通过 [创建「提交/补正歌词」Issue](https://github.com/Steve-xmh/amll-ttml-db/issues/new?template=submit-lyric.yml) 的方式提交歌词，您可以在该页面查看详细的提交流程。
+- 我们推荐通过 [创建「提交/补正歌词」Issue](https://github.com/amll-dev/amll-ttml-db/issues/new?template=submit-lyric.yml) 的方式提交歌词，您可以在该页面查看详细的提交流程；
 
+- 您也可以通过手动提交 Pull Request 来提交歌词，这需要您确保您的 TTML 歌词文件 **格式正确**，并仿照本仓库内 Bot 所提交的 Pull Request 进行编写；
+   > 此方法可以避免 Bot 在歌词提交时进行的 `重排元数据` `依据时间轴重排歌词行顺序` 等格式化行为，但请您务必确保所提交的 TTML 歌词文件 及 Pull Request **格式完全正确**。
+
+- 您还可以在 AMLL TTML 歌词站的 [创作中心](https://amlldb.bikonoo.com/manage.html) 提交歌词。在歌词站上传歌词需要您注册并登录，点击 <kbd>投稿</kbd> 并上传 TTML 歌词文件，通常情况下网站会自动识别歌词元数据并填充投稿标题，直接提交即可。
+   > 目前歌词站的审核人员较少，若您想要快速审核，请优先考虑在 GitHub 提交歌词。
+
+> 如果您的歌曲在网易云音乐无可用版本，您可以自行上传歌曲文件。
+ > - 在 Issue 中，您可以在 备注 处填写歌曲文件下载链接；
+ > - 在 Pull Request 中，您可以在 Body 中的 `备注` / Comment 处填写歌曲文件下载链接；
+ > - 在 AMLL TTML 歌词站 创作中心 中，您可以点击 <kbd>内容管理</kbd>，找到并点击进入您想要上传歌曲文件的歌词，再点击 <kbd>上传音频</kbd> 即可上传歌曲文件。
+ 
 ## 4. 等待审核
 
 为了提高歌词库的歌词统一性和综合质量，您的歌词将由 AMLL TTML 歌词审核团进行人工审核，以确保您的歌词符合 [歌词审核细则](./instructions/instruction.md) 的要求。
@@ -207,16 +241,33 @@
     > **演唱形式** 可以是主唱、说唱、和声等。
 
 如果您认为您的歌词不存在审核员修改意见中的问题，请尝试再次提交并附上原因，以便审核员理解你的意图，或是请求其他审核员审核。
-
+> [!TIP]
+>
+> 若您的歌词 Pull Request 处于 **未审核**（无 `审核中` 标签）或 **审核未通过**（审核留言歌词驳回原因，且标记 `待更新` 标签）状态，您可在该 PR 内 Comment（即评论） `/update {TTML 歌词文件下载直链}` 以更新歌词文件，此行为视为重新提交审核；
+> > 若您需要增加备注，请评论 `/update {TTML 歌词文件下载直链} {备注}` 。
+> 
+> 在 Pull Request 内 Comment（即评论） `/label {标签}` 以添加 [合适的标签](https://github.com/amll-dev/amll-ttml-db/labels)；
+> 
+> > 机器人的操作可能有将近1-2分钟的延迟，机器人在准备操作时将对此评论竖大拇指示意。
+> 
+> 您可以评论 `/close {原因}` 来自助关闭本次歌词提交，原因选填。
+> 
+> *上述所有操作，您无需输入括号* `{}`。
 ***
 
 # 使用歌词数据库
 
 ## AMLL Player [推荐]
 
-AMLL Player 是 Apple Music-like Lyrics 的本地客户端，可播放本地音乐和连接 WebSocket 服务端。[前往了解](https://github.com/Steve-xmh/applemusic-like-lyrics/actions/workflows/build-player.yaml)
+AMLL Player 是 Apple Music-like Lyrics 的本地客户端，可播放本地音乐和连接 WebSocket 服务端。[前往下载](https://github.com/amll-dev/applemusic-like-lyrics/actions/workflows/build-player.yaml)
 
 AMLL Player 已内置歌词库搜索功能，导入本地歌曲后编辑歌词覆盖信息，即可从 AMLL TTML DB 搜索/导入歌词。
+
+## AMLL Page 
+
+AMLL Page 是 AMLL Player 的在线网页版本，可播放本地音乐和连接 WebSocket 服务端，除插件功能外，与 Player 基本一致。[前往了解](https://github.com/apoint123/amll-page)
+
+> 感谢 [@apoint123](https://github.com/apoint123) 开发的网页版 AMLL！
 
 ##  Apple Music-like Lyrics for BetterNCM [停止维护]
 
@@ -236,7 +287,7 @@ Apple Music-like Lyrics for BetterNCM 已内置本仓库歌词源，无需手动
 
 ### 社区镜像源
 
-您也可以尝试由社区提供的镜像源，具体使用方法请自行在站内查阅，感谢 [@HelloZGY](https://github.com/cybaka520) 与 [@Luorix](https://github.com/LuorixDev) ！
+您也可以尝试由社区提供的镜像源，具体使用方法请自行在站内查阅，感谢 [@HelloZGY](https://github.com/cybaka520), [@Luorix](https://github.com/LuorixDev) 与 [@Burial0268](https://github.com/Burial0268) ！
 
 [AMLL TTML DB 镜像站](https://amlldb.bikonoo.com/mirror.html) By [@HelloZGY](https://github.com/cybaka520)
 
@@ -248,6 +299,11 @@ Apple Music-like Lyrics for BetterNCM 已内置本仓库歌词源，无需手动
 
 ```text
 06e48500-d086-11f0-bb6e-451fd0fc9216|Dimeta%E9%95%9C%E5%83%8F%E7%AB%99v1||ttml|https://amll.mirror.dimeta.top/api/db/ncm-lyrics/[NCM_ID].ttml
+```
+
+[GDBA 镜像站](https://amll-ttml-db.gbclstudio.cn) By [@Burial0268](https://github.com/Burial0268)
+```text
+c552e13a-19a4-4ff1-9b37-f4cdeb3de9dd|GDBA%E9%95%9C%E5%83%8F%E7%AB%99||ttml|https://amll-ttml-db.gbclstudio.cn/ncm-lyrics/[NCM_ID].ttml
 ```
 
 ## UniLyric [适配最多]
@@ -263,10 +319,10 @@ UniLyric 不仅是一个全能的歌词转换器，同时可以作为 AMLL Playe
 
 现阶段支持以下平台的歌词索引：
 
-- [Netease Cloud Music - 网易云音乐](./ncm-lyrics) - [`ncm-lyrics/`](https://github.com/Steve-xmh/amll-ttml-db/tree/main/ncm-lyrics)
-- [QQ Music - QQ 音乐](./qq-lyrics) - [`qq-lyrics/`](https://github.com/Steve-xmh/amll-ttml-db/tree/main/qq-lyrics)
-- [Apple Music](./am-lyrics) - [`am-lyrics/`](https://github.com/Steve-xmh/amll-ttml-db/tree/main/am-lyrics)
-- [Spotify](./spotify-lyrics) - [`spotify-lyrics/`](https://github.com/Steve-xmh/amll-ttml-db/tree/main/spotify-lyrics)
+- [Netease Cloud Music - 网易云音乐](./ncm-lyrics) - [`ncm-lyrics/`](https://github.com/amll-dev/amll-ttml-db/tree/main/ncm-lyrics)
+- [QQ Music - QQ 音乐](./qq-lyrics) - [`qq-lyrics/`](https://github.com/amll-dev/amll-ttml-db/tree/main/qq-lyrics)
+- [Apple Music](./am-lyrics) - [`am-lyrics/`](https://github.com/amll-dev/amll-ttml-db/tree/main/am-lyrics)
+- [Spotify](./spotify-lyrics) - [`spotify-lyrics/`](https://github.com/amll-dev/amll-ttml-db/tree/main/spotify-lyrics)
 
 每个歌词文件均已自动生成不同格式的歌词文件，通过文件后缀名区分：
 
@@ -279,9 +335,9 @@ UniLyric 不仅是一个全能的歌词转换器，同时可以作为 AMLL Playe
 
 您可以通过以下直链获取您对应平台音乐 ID 的歌词文件：
 
-> `https://raw.githubusercontent.com/Steve-xmh/amll-ttml-db/refs/heads/main/[对应平台歌词文件夹]/[音乐ID].[后缀名]`
+> `https://raw.githubusercontent.com/amll-dev/amll-ttml-db/refs/heads/main/[对应平台歌词文件夹]/[音乐ID].[后缀名]`
 
-如果需要检索从建立数据库开始至今所有的歌词文件，可以访问 [raw-lyrics/](./raw-lyrics/) 文件夹，内部的文件以 `[提交 UNIX 时间戳]-[提交者 Github ID]-[8 位随机 ID].ttml` 命名。或者通过 [metadata/](./metadata) 文件夹中的 [`raw-lyrics-index.jsonl`](https://github.com/Steve-xmh/amll-ttml-db/raw/refs/heads/main/metadata/raw-lyrics-index.jsonl) 进行检索，里面包含了所有歌词文件的元数据，并且从上到下按照从旧到新的顺序依次列出。
+如果需要检索从建立数据库开始至今所有的歌词文件，可以访问 [raw-lyrics/](./raw-lyrics/) 文件夹，内部的文件以 `[提交 UNIX 时间戳]-[提交者 Github ID]-[8 位随机 ID].ttml` 命名。或者通过 [metadata/](./metadata) 文件夹中的 [`raw-lyrics-index.jsonl`](https://github.com/amll-dev/amll-ttml-db/raw/refs/heads/main/metadata/raw-lyrics-index.jsonl) 进行检索，里面包含了所有歌词文件的元数据，并且从上到下按照从旧到新的顺序依次列出。
 
 同时，在每个平台文件夹下，还有一个存有基本信息的 `index.jsonl` 逐行存储了该平台下所属的所有歌词基本信息，以原始歌词文件顺序排列，也列出了所有历史歌词信息。
 
@@ -289,7 +345,7 @@ UniLyric 不仅是一个全能的歌词转换器，同时可以作为 AMLL Playe
 
 # 共享协议
 
-本仓库的外来数据部分遵循原数据提供方的共享协议共享，提交者自主编写的部分使用 [CC0 1.0 共享协议](https://github.com/Steve-xmh/amll-ttml-db?tab=CC0-1.0-1-ov-file) 共享。
+本仓库的外来数据部分遵循原数据提供方的共享协议共享，提交者自主编写的部分使用 [CC0 1.0 共享协议](https://github.com/amll-dev/amll-ttml-db?tab=CC0-1.0-1-ov-file) 共享。
 
 ***
 

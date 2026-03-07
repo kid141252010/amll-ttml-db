@@ -2,7 +2,7 @@ name: 检查歌词提交正确性
 on:
   workflow_dispatch:
   issues:
-    types: [labeled]
+    types: [opened, edited, labeled]
   issue_comment:
     types: [created]
 
@@ -18,7 +18,10 @@ permissions:
 jobs:
   check-submit-rust:
     if: |
-      (github.event_name == 'issues' && github.event.label.name == '歌词提交/补正') ||
+      (github.event_name == 'issues' &&
+       contains(github.event.issue.title, '歌词') &&
+       (contains(github.event.issue.title, '补正') || contains(github.event.issue.title, '修正') || contains(github.event.issue.title, '提交'))
+      ) ||
       (github.event_name == 'issue_comment' && github.event.issue.pull_request != null && github.event.sender.type != 'Bot' && startsWith(github.event.comment.body, '/'))
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -27,6 +30,11 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
+          sparse-checkout: |
+            raw-lyrics
+            scripts
+            metadata
+            .github
 
       - name: 安装 Rust 环境
         uses: actions-rust-lang/setup-rust-toolchain@v1
