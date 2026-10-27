@@ -74,6 +74,11 @@ fn check_is_contributor(root_path: &Path, user_id: u64) -> bool {
     false
 }
 
+fn detect_apple_style(original_ttml: &str) -> bool {
+    let head = original_ttml.split("<body").next().unwrap_or_default();
+    head.contains("<translation") || head.contains("<transliteration")
+}
+
 fn process_ttml_string(
     original_ttml: &str,
     file_name: &str,
@@ -96,7 +101,7 @@ fn process_ttml_string(
     info!("正在生成 TTML 文件...");
     let compact_gen_opts = GeneratorConfig {
         format: false,
-        ..Default::default()
+        use_apple_format_rules: detect_apple_style(original_ttml),
     };
     let generated_ttml =
         generate_ttml(&result, &compact_gen_opts).map_err(|e| format!("生成 TTML 失败: {e:?}"))?;
@@ -421,6 +426,78 @@ mod tests {
     use super::*;
     use std::env;
     use std::fs;
+
+    fn translation_test_ttml(head_translation: &str, inline_translation: &str) -> String {
+        format!(
+            r#"<tt xmlns="http://www.w3.org/ns/ttml" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns:amll="http://www.example.com/ns/amll" xmlns:itunes="http://music.apple.com/lyric-ttml-internal">
+<head><metadata>
+<amll:meta key="musicName" value="Test Song"/>
+<amll:meta key="artists" value="Test Artist"/>
+<amll:meta key="album" value="Test Album"/>
+<amll:meta key="appleMusicId" value="123456"/>
+<iTunesMetadata xmlns="http://music.apple.com/lyric-ttml-internal">{head_translation}</iTunesMetadata>
+</metadata></head>
+<body><div><p begin="00:01.000" end="00:03.000" itunes:key="L1"><span begin="00:01.000" end="00:02.000">Hello </span><span begin="00:02.000" end="00:03.000">world</span>{inline_translation}</p></div></body>
+</tt>"#
+        )
+    }
+
+    #[test]
+    fn test_detect_apple_style() {
+        assert!(detect_apple_style(
+            "<head><translations></translations></head><body/>"
+        ));
+        assert!(detect_apple_style(
+            "<head><transliterations></transliterations></head><body/>"
+        ));
+        assert!(!detect_apple_style(
+            r#"<head/><body><p><span ttm:role="x-translation">你好</span></p></body>"#
+        ));
+        assert!(!detect_apple_style("<head/><body><p>Hello</p></body>"));
+        assert!(!detect_apple_style("<head/><body><translation/></body>"));
+    }
+
+    #[test]
+    fn test_apple_translation_round_trip() {
+        let input = translation_test_ttml(
+            r#"<translations><translation xml:lang="zh-Hans"><text for="L1">你好世界</text></translation></translations>"#,
+            "",
+        );
+        let output = process_ttml_string(&input, "apple.ttml")
+            .unwrap()
+            .generated_ttml;
+        assert!(output.contains("<translation"));
+        assert!(output.contains("<text for="));
+        assert!(!output.contains("x-translation"));
+    }
+
+    #[test]
+    fn test_amll_translation_round_trip() {
+        let input = translation_test_ttml(
+            "",
+            r#"<span ttm:role="x-translation" xml:lang="zh-Hans">你好世界</span>"#,
+        );
+        let output = process_ttml_string(&input, "amll.ttml")
+            .unwrap()
+            .generated_ttml;
+        assert!(output.contains("x-translation"));
+        assert!(!output.contains("<translation"));
+    }
+
+    #[test]
+    fn test_mixed_translation_round_trip() {
+        let input = translation_test_ttml(
+            r#"<translations><translation xml:lang="zh-Hans"><text for="L1">APPLE_ZH_MARKER</text></translation></translations>"#,
+            r#"<span ttm:role="x-translation" xml:lang="zh-Hans">AMLL_ZH_MARKER</span><span ttm:role="x-translation" xml:lang="en-US">AMLL_EN_MARKER</span>"#,
+        );
+        let output = process_ttml_string(&input, "mixed.ttml")
+            .unwrap()
+            .generated_ttml;
+        assert!(!output.contains("x-translation"));
+        assert!(output.contains("APPLE_ZH_MARKER"));
+        assert!(output.contains("AMLL_EN_MARKER"));
+        assert!(!output.contains("AMLL_ZH_MARKER"));
+    }
 
     fn setup_test_env(dir_name: &str) -> PathBuf {
         let mut temp_dir = env::temp_dir();
